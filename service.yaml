@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitops-nginx
+  namespace: demo
+spec:
+  selector:
+    app: gitops-nginx
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
+
